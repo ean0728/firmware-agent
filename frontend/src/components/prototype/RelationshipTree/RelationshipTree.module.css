@@ -1,0 +1,82 @@
+.tree {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orgBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.orgCard,
+.childRow {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-10);
+  background: var(--color-surface);
+  text-align: left;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px;
+}
+
+.orgCard.selected,
+.childSelected {
+  background: var(--color-subtle);
+}
+
+.orgMark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-9);
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.orgName {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.orgSummary,
+.childSummary {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.childRow {
+  margin-left: 20px;
+  width: calc(100% - 20px);
+}
+
+.deptDot,
+.projectDot {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.deptDot {
+  background: var(--color-graphite);
+}
+
+.projectDot {
+  background: var(--color-accent);
+}
+
+.childName {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.crossOrg {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--color-accent);
+}

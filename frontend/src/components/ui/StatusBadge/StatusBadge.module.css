@@ -1,0 +1,36 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 5px 20px;
+  border-radius: var(--radius-14);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.active {
+  background: var(--color-subtle);
+  color: var(--color-positive);
+}
+
+.expiring {
+  background: var(--color-subtle);
+  color: var(--color-accent);
+}
+
+.disabled {
+  background: var(--color-subtle);
+  color: var(--color-text-secondary);
+}
+
+.success {
+  background: var(--color-subtle);
+  color: var(--color-positive);
+}
+
+.denied {
+  background: var(--color-subtle);
+  color: var(--color-accent);
+}

@@ -1,0 +1,192 @@
+.layout {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 364px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.listPanel,
+.detailPanel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-16);
+  padding: 20px;
+}
+
+.count {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.orgList {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.orgCard {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-10);
+  background: var(--color-surface);
+  text-align: left;
+}
+
+.orgSelected {
+  background: var(--color-subtle);
+}
+
+.orgMark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-10);
+  background: var(--color-graphite);
+  flex-shrink: 0;
+}
+
+.orgSelected .orgMark {
+  background: var(--color-accent);
+}
+
+.orgName {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.orgMeta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.detailTitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.detailCode {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.metrics {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.metric {
+  background: var(--color-canvas);
+  border-radius: var(--radius-10);
+  padding: 15px 16px;
+  min-height: 92px;
+}
+
+.metric p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.metric strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 24px;
+}
+
+.treeTitle {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tree {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.treeItem {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.deptDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--color-graphite);
+}
+
+.deptDotAccent {
+  background: var(--color-accent);
+}
+
+.deptName {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.deptMeta {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.footerNote {
+  margin-top: 40px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.drawerForm {
+  display: grid;
+  gap: 20px;
+}
+
+.drawerForm p {
+  padding: 14px;
+  border-radius: var(--radius-8);
+  background: var(--color-subtle);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+@media (max-width: 1199px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .detailHeader {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,46 @@
+:root {
+  --color-canvas: #f4f3ef;
+  --color-surface: #fbfbf9;
+  --color-graphite: #20211f;
+  --color-text: #242522;
+  --color-text-secondary: #73756f;
+  --color-text-on-dark: #fbfbf9;
+  --color-border: #dedfd9;
+  --color-subtle: #ecebe6;
+  --color-accent: #c96a3d;
+  --color-positive: #4f7a62;
+
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-48: 48px;
+
+  --radius-8: 8px;
+  --radius-9: 9px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-14: 14px;
+  --radius-16: 16px;
+  --radius-18: 18px;
+  --radius-pill: 999px;
+
+  --font-family: "Geist", "Segoe UI", sans-serif;
+
+  --app-design-width: 1440px;
+  --sidebar-width-admin: 256px;
+  --sidebar-width-user: 240px;
+  --main-width-admin: 1056px;
+  --main-width-user: 1072px;
+  --page-gutter-desktop: 48px;
+
+  --bp-mobile-max: 767px;
+  --bp-tablet-min: 768px;
+  --bp-tablet-max: 1199px;
+  --bp-desktop-min: 1200px;
+}

@@ -1,0 +1,18 @@
+.select {
+  min-width: 270px;
+  height: 42px;
+  padding: 0 var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-8);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .select {
+    min-width: 0;
+    width: 100%;
+  }
+}

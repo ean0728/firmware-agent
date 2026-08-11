@@ -1,0 +1,77 @@
+.toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.toolbar input {
+  max-width: 360px;
+}
+
+.filterSelect,
+.selectField select {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-8);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.selectField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.memberCell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.username {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.note {
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: var(--radius-8);
+  background: var(--color-subtle);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar input {
+    max-width: none;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

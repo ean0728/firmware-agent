@@ -1,0 +1,25 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-14);
+  padding: 18px 20px;
+  min-height: 144px;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.value {
+  margin-top: 15px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.meta {
+  margin-top: 11px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}

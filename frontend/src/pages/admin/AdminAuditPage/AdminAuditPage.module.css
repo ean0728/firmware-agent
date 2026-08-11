@@ -1,0 +1,27 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.toolbar input {
+  flex: 1;
+  min-width: 240px;
+  max-width: 380px;
+}
+
+.filterSelect {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-8);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}

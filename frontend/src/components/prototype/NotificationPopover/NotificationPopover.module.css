@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: min(320px, 80vw);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+  box-shadow: 0 12px 32px rgba(32, 33, 31, 0.12);
+  z-index: 50;
+  padding: 8px;
+}
+
+.item {
+  padding: 12px;
+  border-radius: var(--radius-8);
+}
+
+.item + .item {
+  border-top: 1px solid var(--color-border);
+}
+
+.itemTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.itemDesc {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.itemTime {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}

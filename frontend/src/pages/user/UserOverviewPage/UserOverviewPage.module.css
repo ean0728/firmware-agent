@@ -1,0 +1,210 @@
+.identity {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-16);
+  padding: 22px 28px 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.identityTitle {
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.identityDesc {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.statusPill {
+  display: inline-flex;
+  margin-top: 16px;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-subtle);
+  color: var(--color-positive);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.summaryGrid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.summaryGrid strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.summaryGrid span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.lower {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 30px;
+}
+
+.orgsPanel,
+.collabPanel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-16);
+  padding: 20px 24px;
+}
+
+.panelTitle {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.panelMeta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.orgCards {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orgCard {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+  border-radius: var(--radius-10);
+  background: var(--color-canvas);
+}
+
+.orgMark {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-10);
+  background: var(--color-accent);
+}
+
+.orgName {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.orgDept {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.orgAside {
+  text-align: right;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.collabHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.collabList {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.collabItem {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.collabItem:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.projectCode {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-10);
+  background: var(--color-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.projectName {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.projectOrg,
+.projectMeta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.note {
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1199px) {
+  .identity {
+    grid-template-columns: 1fr;
+  }
+
+  .lower {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .orgCard {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .orgAside {
+    grid-column: 2;
+    text-align: left;
+  }
+}
