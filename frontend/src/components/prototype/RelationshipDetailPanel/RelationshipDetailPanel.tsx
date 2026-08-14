@@ -8,14 +8,22 @@ interface RelationshipDetailPanelProps {
 export function RelationshipDetailPanel({ detail }: RelationshipDetailPanelProps) {
   if (!detail) {
     return (
-      <aside className={styles.panel}>
+      <aside
+        className={`${styles.panel} subtle-scrollbar`}
+        aria-label="关系详情"
+        tabIndex={0}
+      >
         <p className={styles.empty}>选择组织、部门或项目节点后，此面板展示对应关系详情。</p>
       </aside>
     );
   }
 
   return (
-    <aside className={styles.panel}>
+    <aside
+      className={`${styles.panel} subtle-scrollbar`}
+      aria-label="关系详情"
+      tabIndex={0}
+    >
       <div className={styles.header}>
         <p className={styles.eyebrow}>关系详情</p>
         <span className={styles.badge}>{detail.nodeType === 'project' ? '项目' : detail.nodeType === 'department' ? '部门' : '组织'}</span>

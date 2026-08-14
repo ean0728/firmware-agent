@@ -92,20 +92,26 @@ export function UserOverviewPage() {
           <p className={styles.panelMeta}>
             {filteredOrgs.length} 个组织 · {identitySummary.departmentCount} 个部门
           </p>
-          <div className={styles.orgCards}>
-            {filteredOrgs.map((org) => (
-              <article key={org.id} className={styles.orgCard}>
-                <span className={styles.orgMark} />
-                <div className={styles.orgBody}>
-                  <p className={styles.orgName}>{org.name}</p>
-                  <p className={styles.orgDept}>{org.departments}</p>
-                </div>
-                <div className={styles.orgAside}>
-                  <p>{memberTypeLabels[org.memberType]}</p>
-                  <p>{org.projectCount} 个项目</p>
-                </div>
-              </article>
-            ))}
+          <div
+            className={`${styles.orgScroll} subtle-scrollbar`}
+            aria-label="我的组织列表"
+            tabIndex={0}
+          >
+            <div className={styles.orgCards}>
+              {filteredOrgs.map((org) => (
+                <article key={org.id} className={styles.orgCard}>
+                  <span className={styles.orgMark} />
+                  <div className={styles.orgBody}>
+                    <p className={styles.orgName}>{org.name}</p>
+                    <p className={styles.orgDept}>{org.departments}</p>
+                  </div>
+                  <div className={styles.orgAside}>
+                    <p>{memberTypeLabels[org.memberType]}</p>
+                    <p>{org.projectCount} 个项目</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
           <p className={styles.note}>组织关系彼此独立，不默认指定“主要组织”。</p>
         </section>
@@ -116,18 +122,24 @@ export function UserOverviewPage() {
               全部协作
             </button>
           </div>
-          <ul className={styles.collabList}>
-            {filteredCollabs.map((item) => (
-              <li key={item.id} className={styles.collabItem}>
-                <span className={styles.projectCode}>{item.code}</span>
-                <div>
-                  <p className={styles.projectName}>{item.name}</p>
-                  <p className={styles.projectOrg}>{item.organizationName}</p>
-                  <p className={styles.projectMeta}>{item.meta}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div
+            className={`${styles.collabScroll} subtle-scrollbar`}
+            aria-label="近期协作列表"
+            tabIndex={0}
+          >
+            <ul className={styles.collabList}>
+              {filteredCollabs.map((item) => (
+                <li key={item.id} className={styles.collabItem}>
+                  <span className={styles.projectCode}>{item.code}</span>
+                  <div>
+                    <p className={styles.projectName}>{item.name}</p>
+                    <p className={styles.projectOrg}>{item.organizationName}</p>
+                    <p className={styles.projectMeta}>{item.meta}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
           <p className={styles.note}>切换顶部协作上下文后，项目与通知同步过滤。</p>
         </section>
       </div>

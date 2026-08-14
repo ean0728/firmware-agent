@@ -50,3 +50,46 @@ h3,
 p {
   margin: 0;
 }
+
+.subtle-scrollbar {
+  --scrollbar-thumb: color-mix(in srgb, var(--color-graphite) 34%, transparent);
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.subtle-scrollbar:hover,
+.subtle-scrollbar:focus-within {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+.subtle-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.subtle-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.subtle-scrollbar::-webkit-scrollbar-thumb {
+  min-height: 48px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  background-clip: padding-box;
+  transition: background-color 160ms ease;
+}
+
+.subtle-scrollbar:hover::-webkit-scrollbar-thumb,
+.subtle-scrollbar:focus-within::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+}
+
+.subtle-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--scrollbar-thumb) 78%, var(--color-graphite));
+}
+
+.subtle-scrollbar:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-accent) 45%, transparent);
+  outline-offset: -2px;
+}

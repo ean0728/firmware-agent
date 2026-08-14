@@ -29,6 +29,10 @@
 }
 
 .treePanel {
+  display: flex;
+  flex-direction: column;
+  height: 510px;
+  overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-16);
@@ -50,6 +54,14 @@
 .toolbar input {
   flex: 1;
   min-width: 220px;
+}
+
+.treeScroll {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
 }
 
 .note {

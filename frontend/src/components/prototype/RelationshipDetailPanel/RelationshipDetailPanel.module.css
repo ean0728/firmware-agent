@@ -1,4 +1,5 @@
 .panel {
+  --scrollbar-thumb: rgba(251, 251, 249, 0.32);
   width: 372px;
   height: 510px;
   overflow: auto;

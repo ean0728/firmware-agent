@@ -80,8 +80,14 @@ export function UserCollaborationPage() {
             />
             <FilterChips options={['全部', '内部', '外部']} value={filter} onChange={setFilter} />
           </div>
-          <RelationshipTree nodes={filteredTree} selectedId={selectedId} onSelect={onSelect} />
-          <p className={styles.note}>按组织展开关系；用户侧只读，关系由管理员维护。</p>
+          <div
+            className={`${styles.treeScroll} subtle-scrollbar`}
+            aria-label="组织、部门与项目关系列表"
+            tabIndex={0}
+          >
+            <RelationshipTree nodes={filteredTree} selectedId={selectedId} onSelect={onSelect} />
+            <p className={styles.note}>按组织展开关系；用户侧只读，关系由管理员维护。</p>
+          </div>
         </section>
         <RelationshipDetailPanel detail={detail} />
       </div>

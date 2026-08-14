@@ -1,0 +1,47 @@
+{
+  "runId": "firmware-agent-user-system-v2-2026-08-11",
+  "fileKey": "fcIW68uTgD0KWrwKvjItHE",
+  "phase": "complete",
+  "step": "validated-and-delivered",
+  "entities": {
+    "collections": {
+      "primitives": "VariableCollectionId:3:4",
+      "semantic": "VariableCollectionId:3:5",
+      "spacing": "VariableCollectionId:3:27"
+    },
+    "variables": {
+      "count": 32
+    },
+    "pages": {
+      "foundations": "0:1",
+      "admin": "3:2",
+      "user": "3:3"
+    },
+    "components": {
+      "button": "5:9",
+      "navigationItem": "5:14",
+      "input": "5:15",
+      "status": "5:17",
+      "avatar": "5:19"
+    },
+    "screens": {
+      "cover": "4:2",
+      "foundations": "4:13",
+      "components": "5:2",
+      "adminLogin": "6:2",
+      "adminOverview": "6:23",
+      "adminUsers": "7:10",
+      "adminOrganization": "8:34",
+      "adminDepartments": "44:49",
+      "adminDepartmentDrawer": "45:57",
+      "adminProjects": "46:72",
+      "adminProjectDrawer": "47:80",
+      "adminAudit": "8:112",
+      "userLogin": "9:2",
+      "userOverview": "9:23",
+      "userCollaboration": "9:74"
+    }
+  },
+  "pendingValidations": [],
+  "completedSteps": ["phase0", "phase1", "phase2", "phase3", "phase4", "phase5"]
+}
